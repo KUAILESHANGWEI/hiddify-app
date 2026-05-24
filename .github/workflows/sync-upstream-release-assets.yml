@@ -29,14 +29,4 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x scripts/sync_release_assets.sh
-
-          app_tag="$(gh release view --repo hiddify/hiddify-app --json tagName --jq .tagName)"
-          ./scripts/sync_release_assets.sh hiddify/hiddify-app "${app_tag}" "${GITHUB_REPOSITORY}" "${app_tag}" true
-          ./scripts/sync_release_assets.sh hiddify/hiddify-app v0.13.6 "${GITHUB_REPOSITORY}" v0.13.6 false
-
-          core_version="$(sed -n 's/^core.version=//p' dependencies.properties)"
-          core_version_base="${core_version%%-*}"
-          ./scripts/sync_release_assets.sh hiddify/hiddify-core "v${core_version_base}" "${GITHUB_REPOSITORY}" "core-v${core_version_base}" false
-
-          ./scripts/sync_release_assets.sh AppImage/appimagetool continuous "${GITHUB_REPOSITORY}" thirdparty-appimagetool-continuous false
-          gh release edit "${app_tag}" --repo "${GITHUB_REPOSITORY}" --latest
+          ./scripts/sync_release_assets.sh --sync-hiddify-app-assets "${GITHUB_REPOSITORY}"

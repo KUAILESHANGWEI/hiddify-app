@@ -1,6 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [ "${1:-}" = "--sync-hiddify-app-assets" ]; then
+  if [ "$#" -gt 2 ]; then
+    echo "Usage: $0 --sync-hiddify-app-assets [target-owner/repo]" >&2
+    exit 2
+  fi
+
+  target_repo="${2:-${GITHUB_REPOSITORY:-KUAILESHANGWEI/hiddify-app}}"
+  script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+  script_path="${script_dir}/$(basename -- "${BASH_SOURCE[0]}")"
+  repo_root="$(cd -- "${script_dir}/.." && pwd)"
+
+  app_tag="$(gh release view --repo hiddify/hiddify-app --json tagName --jq .tagName)"
+  "${script_path}" hiddify/hiddify-app "${app_tag}" "${target_repo}" "${app_tag}" true
+  "${script_path}" hiddify/hiddify-app v0.13.6 "${target_repo}" v0.13.6 false
+
+  core_version="$(sed -n 's/^core.version=//p' "${repo_root}/dependencies.properties")"
+  core_version_base="${core_version%%-*}"
+  "${script_path}" hiddify/hiddify-core "v${core_version_base}" "${target_repo}" "core-v${core_version_base}" false
+
+  "${script_path}" AppImage/appimagetool continuous "${target_repo}" thirdparty-appimagetool-continuous false
+  gh release edit "${app_tag}" --repo "${target_repo}" --latest
+  exit 0
+fi
+
 if [ "$#" -lt 2 ] || [ "$#" -gt 5 ]; then
   echo "Usage: $0 <source-owner/repo> <source-tag|latest> [target-owner/repo] [target-tag] [latest-mode]" >&2
   echo "latest-mode: auto, true, or false. Defaults to auto." >&2
