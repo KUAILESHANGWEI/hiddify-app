@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ "$#" -lt 2 ] || [ "$#" -gt 4 ]; then
-  echo "Usage: $0 <source-owner/repo> <source-tag|latest> [target-owner/repo] [target-tag]" >&2
+if [ "$#" -lt 2 ] || [ "$#" -gt 5 ]; then
+  echo "Usage: $0 <source-owner/repo> <source-tag|latest> [target-owner/repo] [target-tag] [latest-mode]" >&2
+  echo "latest-mode: auto, true, or false. Defaults to auto." >&2
   exit 2
 fi
 
@@ -10,6 +11,15 @@ source_repo="$1"
 source_ref="$2"
 target_repo="${3:-${GITHUB_REPOSITORY:-KUAILESHANGWEI/hiddify-app}}"
 target_tag="${4:-}"
+latest_mode="${5:-auto}"
+
+case "${latest_mode}" in
+  auto|true|false) ;;
+  *)
+    echo "Invalid latest-mode: ${latest_mode}" >&2
+    exit 2
+    ;;
+esac
 
 if [ "${source_ref}" = "latest" ]; then
   release_json="$(gh release view --repo "${source_repo}" --json tagName,name,isPrerelease,assets)"
@@ -47,6 +57,11 @@ else
   create_args=(--repo "${target_repo}" --title "${release_name}" --notes-file "${notes_file}" --target main)
   if [ "${is_prerelease}" = "true" ]; then
     create_args+=(--prerelease)
+  fi
+  if [ "${latest_mode}" = "true" ]; then
+    create_args+=(--latest)
+  elif [ "${latest_mode}" = "false" ]; then
+    create_args+=(--latest=false)
   fi
   gh release create "${target_tag}" "${create_args[@]}"
 fi
