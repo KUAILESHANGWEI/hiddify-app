@@ -1,0 +1,40 @@
+name: Sync upstream release assets
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream-release-assets
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Sync app and build dependency assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          chmod +x scripts/sync_release_assets.sh
+
+          ./scripts/sync_release_assets.sh hiddify/hiddify-app latest "${GITHUB_REPOSITORY}"
+          ./scripts/sync_release_assets.sh hiddify/hiddify-app v0.13.6 "${GITHUB_REPOSITORY}" v0.13.6
+
+          core_version="$(sed -n 's/^core.version=//p' dependencies.properties)"
+          core_version_base="${core_version%%-*}"
+          ./scripts/sync_release_assets.sh hiddify/hiddify-core "v${core_version_base}" "${GITHUB_REPOSITORY}" "core-v${core_version_base}"
+
+          ./scripts/sync_release_assets.sh AppImage/appimagetool continuous "${GITHUB_REPOSITORY}" thirdparty-appimagetool-continuous

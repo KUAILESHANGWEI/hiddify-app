@@ -2,9 +2,9 @@
 
 ## Step 1 مرحله
 
-You need to install the Hiddify application from [our site](https://app.hiddify.com) or [GitHub](https://github.com/hiddify/hiddify-app/tree/main?tab=readme-ov-file#%EF%B8%8F-get-it-on-stores).
+You need to install the Hiddify application from [our site](https://app.hiddify.com) or [GitHub](https://github.com/KUAILESHANGWEI/hiddify-app/tree/main?tab=readme-ov-file#%EF%B8%8F-get-it-on-stores).
 
-شما باید ابتدا نرم‌افزار هیدیفای را از [سایت ما](https://app.hiddify.com) یا [گیت‌هاب](https://github.com/hiddify/hiddify-app/tree/main?tab=readme-ov-file#%EF%B8%8F-get-it-on-stores) دانلود کنید.
+شما باید ابتدا نرم‌افزار هیدیفای را از [سایت ما](https://app.hiddify.com) یا [گیت‌هاب](https://github.com/KUAILESHANGWEI/hiddify-app/tree/main?tab=readme-ov-file#%EF%B8%8F-get-it-on-stores) دانلود کنید.
 
 ## Step 2-1: Easy Way
 
@@ -19,7 +19,7 @@ If the previous step does not work, copy the following link and paste it into yo
 
 اگر روش قبلی کار نکرد، لینک زیر را کپی کنید و مطابق تصویر به نرم‌افزار هیدیفای منتقل کنید.
 ```
-https://raw.githubusercontent.com/hiddify/hiddify-app/refs/heads/main/test.configs/warp
+https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/warp
 ```
 ![image](https://github.com/user-attachments/assets/2ad5a5d1-4c75-4b2d-b8b3-52a9f1e3e613)
 

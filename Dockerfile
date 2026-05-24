@@ -18,7 +18,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     echo "root ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-RUN wget -O /usr/local/bin/appimagetool "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" && \
+RUN wget -O /usr/local/bin/appimagetool "https://github.com/KUAILESHANGWEI/hiddify-app/releases/download/thirdparty-appimagetool-continuous/appimagetool-x86_64.AppImage" && \
     chmod +x /usr/local/bin/appimagetool
 
 RUN mkdir -p /root/develop && \

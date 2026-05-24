@@ -48,12 +48,9 @@ GEO_ASSETS_DIR=assets$(SEP)core
 CORE_PRODUCT_NAME=hiddify-core
 CORE_NAME=hiddify-lib
 LIB_NAME=hiddify-core
+CORE_VERSION_BASE := $(word 1,$(subst -, ,$(core.version)))
 
-ifeq ($(CHANNEL),prod)
-	CORE_URL=https://github.com/hiddify/hiddify-next-core/releases/download/v$(core.version)
-else
-	CORE_URL=https://github.com/hiddify/hiddify-next-core/releases/download/draft
-endif
+CORE_URL=https://github.com/KUAILESHANGWEI/hiddify-app/releases/download/core-v$(CORE_VERSION_BASE)
 
 ifeq ($(CHANNEL),prod)
 	TARGET=lib/main_prod.dart
@@ -66,7 +63,7 @@ DISTRIBUTOR_ARGS=--skip-clean --build-target $(TARGET) --build-dart-define sentr
 
 
 
-get:	
+get:
 	flutter pub get
 
 gen:
@@ -81,16 +78,16 @@ prepare:
 	@echo use the following commands to prepare the library for each platform:
 	@echo    make android-prepare
 	@echo    make windows-prepare
-	@echo    make linux-prepare 
+	@echo    make linux-prepare
 	@echo    make macos-prepare
 	@echo    make ios-prepare
 
 common-prepare:  get gen translate
 windows-prepare: common-prepare windows-libs
-	
-ios-prepare: common-prepare ios-libs 
+
+ios-prepare: common-prepare ios-libs
 	cd ios; pod repo update; pod install;echo "done ios prepare"
-	
+
 macos-prepare: common-prepare macos-libs
 linux-prepare: common-prepare linux-amd64-libs
 
@@ -105,12 +102,12 @@ linux-appimage-prepare:linux-prepare
 linux-rpm-prepare:linux-prepare
 linux-deb-prepare:linux-prepare
 
-android-prepare:common-prepare android-libs	
+android-prepare:common-prepare android-libs
 android-apk-prepare:android-prepare
 android-aab-prepare:android-prepare
 
 .PHONY: generate_kotlin_protos
-generate_kotlin_protos: 
+generate_kotlin_protos:
 	# Run protoc to generate Kotlin files
 	# protoc \
 	# 	--proto_path=hiddify-core/ \
@@ -138,16 +135,16 @@ generate_dart_protoc:
 
 .PHONY: protos
 protos: generate_go_protoc generate_kotlin_protos generate_dart_protoc
-	
-	
-	
+
+
+
 
 macos-install-deps:
-	brew install create-dmg tree 
+	brew install create-dmg tree
 	npm install -g appdmg
 	dart pub global activate fastforge
 
-ios-install-deps: 
+ios-install-deps:
 	if [ "$(flutter)" = "true" ]; then \
 		curl -L -o ~/Downloads/flutter_macos_3.19.3-stable.zip https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.22.3-stable.zip; \
 		mkdir -p ~/develop; \
@@ -164,13 +161,13 @@ ios-install-deps:
 		PKG_CONFIG_PATH=$(brew --prefix openssl@1.1)/lib/pkgconfig rvm install 2.7.5; \
 		sudo gem install cocoapods -V; \
 	fi
-	brew install create-dmg tree 
+	brew install create-dmg tree
 	npm install -g appdmg
-	
-	dart pub global activate fastforge
-	
 
-android-install-deps: 
+	dart pub global activate fastforge
+
+
+android-install-deps:
 	dart pub global activate fastforge
 android-apk-install-deps: android-install-deps
 android-aab-install-deps: android-install-deps
@@ -194,9 +191,9 @@ linux-install-deps:
 # 	tools for appimage
 	@$(BLUE)Installing appimagetool$(DONE)
 	if [ "$$(uname -m)" = "aarch64" ]; then \
-		wget -O /tmp/appimagetool "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-aarch64.AppImage"; \
+		wget -O /tmp/appimagetool "https://github.com/KUAILESHANGWEI/hiddify-app/releases/download/thirdparty-appimagetool-continuous/appimagetool-aarch64.AppImage"; \
 	else \
-		wget -O /tmp/appimagetool "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage"; \
+		wget -O /tmp/appimagetool "https://github.com/KUAILESHANGWEI/hiddify-app/releases/download/thirdparty-appimagetool-continuous/appimagetool-x86_64.AppImage"; \
 	fi
 	chmod +x /tmp/appimagetool
 	sudo mv /tmp/appimagetool /usr/local/bin/
@@ -258,7 +255,7 @@ linux-flutter-sync:
 windows-install-deps:
 	dart pub global activate fastforge
 # 	choco install innosetup -y
-	
+
 gen_translations: #generating missing translations using google translate
 	cd .github && bash sync_translate.sh
 	make translate
@@ -328,7 +325,7 @@ linux-release: linux-deb-release linux-appimage-release
 
 linux-amd64-release: linux-release
 linux-arm64-release: linux-release
-linux-amd64-musl-release: linux-release 
+linux-amd64-musl-release: linux-release
 linux-arm64-musl-release: linux-release
 
 
@@ -344,7 +341,7 @@ linux-deb-release:
 # ==============================================================================
 # REFERENCE: MANUAL LIBRARY BUNDLING (INJECTION)
 # ==============================================================================
-# Use this method only if you need to manually force specific shared libraries 
+# Use this method only if you need to manually force specific shared libraries
 # (e.g., libcurl.so.4) into the AppImage bundle.
 #
 # IMPLEMENTATION STEPS:
@@ -442,10 +439,10 @@ DOCKER_CMD := \
 linux-docker-release:
 	@$(BLUE)Cleaning main project to reduce context size$(DONE)
 	flutter clean
-	
+
 	@$(BLUE)Building docker image (Cached)$(DONE)
 	docker build -t $(DOCKER_IMAGE_NAME) -f Dockerfile .
-	
+
 	@$(BLUE)Ensuring cache volumes exist$(DONE)
 	docker volume create $(DOCKER_FLUTTER_VOL) || true
 	docker volume create $(DOCKER_PUB_VOL) || true
@@ -478,7 +475,7 @@ windows-libs:
 	$(MKDIR) $(DESKTOP_OUT) || echo Folder already exists. Skipping...
 	curl -L $(CORE_URL)/$(CORE_NAME)-windows-amd64.tar.gz | tar xz -C $(DESKTOP_OUT)/
 	ls $(DESKTOP_OUT) || dir $(DESKTOP_OUT)/
-	
+
 
 linux-amd64-libs:
 	mkdir -p $(DESKTOP_OUT)
@@ -498,7 +495,7 @@ linux-arm64-musl-libs:
 
 
 macos-libs:
-	mkdir -p  $(DESKTOP_OUT) 
+	mkdir -p  $(DESKTOP_OUT)
 	curl -L $(CORE_URL)/$(CORE_NAME)-macos.tar.gz | tar xz -C $(DESKTOP_OUT)
 
 ios-libs: #not tested
@@ -508,28 +505,27 @@ ios-libs: #not tested
 
 get-geo-assets:
 	echo ""
-	# curl -L https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db -o $(GEO_ASSETS_DIR)/geoip.db
-	# curl -L https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db -o $(GEO_ASSETS_DIR)/geosite.db
+	# Geo assets are vendored or mirrored through KUAILESHANGWEI/hiddify-app when needed.
 
 build-headers:
 	make -C hiddify-core -f Makefile headers && mv $(BINDIR)/$(CORE_NAME)-headers.h $(BINDIR)/hiddify-core.h
 
 build-android-libs:
-	make -C hiddify-core -f Makefile android 
+	make -C hiddify-core -f Makefile android
 	mv $(BINDIR)/$(LIB_NAME).aar $(ANDROID_OUT)/
 
 build-windows-libs:
 	make -C hiddify-core -f Makefile windows-amd64
 
 build-linux-libs:
-	make -C hiddify-core -f Makefile linux-amd64 
+	make -C hiddify-core -f Makefile linux-amd64
 
 build-macos-libs:
 	make -C hiddify-core -f Makefile macos
 
-build-ios-libs: 
-	rm -rf $(IOS_OUT)/HiddifyCore.xcframework 
-	make -C hiddify-core -f Makefile ios  
+build-ios-libs:
+	rm -rf $(IOS_OUT)/HiddifyCore.xcframework
+	make -C hiddify-core -f Makefile ios
 	mv $(BINDIR)/HiddifyCore.xcframework $(IOS_OUT)/HiddifyCore.xcframework
 
 release: # Create a new tag for release.
@@ -537,9 +533,8 @@ release: # Create a new tag for release.
 
 
 
-ios-temp-prepare: 
+ios-temp-prepare:
 	make ios-prepare
 	flutter build ios-framework
 	cd ios
 	pod install
-	

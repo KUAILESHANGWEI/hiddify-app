@@ -10,11 +10,11 @@
             "program": "./hiddify-core/cmd/main",
             // "args": ["build","-c","a.txt","-d","b.txt","--full-config"] ,
             // "args": ["temp"] ,
-            // "args":["profile","https://raw.githubusercontent.com/hiddify/hiddify-next/refs/heads/main/test.configs/warp"],
+            // "args":["profile","https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/warp"],
             "args": [
                 "run",
                 "-c",
-                "https://raw.githubusercontent.com/hiddify/hiddify-next/refs/heads/main/test.configs/warp"
+                "https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/warp"
             ],
             "buildFlags": "-tags with_clash_api,with_gvisor,with_quic,with_wireguard,with_grpc,with_ech,with_utls,with_reality_server"
         },

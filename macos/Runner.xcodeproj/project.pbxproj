@@ -826,9 +826,9 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		414949DA2CCE3D370069D5BA /* XCRemoteSwiftPackageReference "LaunchAtLogin-Legacy" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Legacy";
+			repositoryURL = "https://github.com/KUAILESHANGWEI/hiddify-app.git";
 			requirement = {
-				branch = main;
+				branch = "thirdparty-LaunchAtLogin-Legacy";
 				kind = branch;
 			};
 		};

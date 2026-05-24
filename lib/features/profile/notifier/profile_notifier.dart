@@ -191,7 +191,7 @@ class FreeProfilesNotifier extends _$FreeProfilesNotifier {
   Future<List<FreeProfile>> build() async {
     final httpClient = ref.watch(httpClientProvider);
     final res = await httpClient.get(
-      'https://raw.githubusercontent.com/hiddify/hiddify-app/refs/heads/main/test.configs/free_configs',
+      'https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/free_configs',
     );
     if (res.statusCode == 200) {
       return FreeProfilesModel.fromJson(jsonDecode(res.data.toString()) as Map<String, dynamic>).profiles;

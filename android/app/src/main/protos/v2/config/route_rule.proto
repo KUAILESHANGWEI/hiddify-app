@@ -1,6 +1,6 @@
 syntax = "proto3";
 package config;
-option go_package = "github.com/hiddify/hiddify-core/v2/config";
+option go_package = "github.com/KUAILESHANGWEI/hiddify-app/hiddify-core/v2/config";
 option java_package = "com.hiddify.core.api.v2.config";
 message RouteRule {
   repeated Rule rules = 1 [json_name = "rules"];

@@ -27,7 +27,7 @@ abstract interface class AutoSelectionRepository {
 class AutoSelectionRepositoryImpl with AppLogger implements AutoSelectionRepository {
   AutoSelectionRepositoryImpl({required Ref ref}) : _ref = ref;
   final Ref _ref;
-  static const _baseUrl = 'https://raw.githubusercontent.com/hiddify/Android-GFW-Apps/refs/heads/master/';
+  static const _baseUrl = 'https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/assets/per_app_proxy/';
 
   @override
   Future<(Set<String>?, AutoSelectionResult)> getByAppProxyMode({AppProxyMode? mode, Region? region}) async =>

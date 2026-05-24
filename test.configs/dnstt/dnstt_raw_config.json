@@ -206,14 +206,14 @@
       {
         "type": "remote",
         "tag": "geoip-ir",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "url": "https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/dnstt/rule-set/country/geoip-ir.srs",
         "download_detour": "select",
         "update_interval": "120h0m0s"
       },
       {
         "type": "remote",
         "tag": "geosite-ir",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "url": "https://raw.githubusercontent.com/KUAILESHANGWEI/hiddify-app/refs/heads/main/test.configs/dnstt/rule-set/country/geosite-ir.srs",
         "download_detour": "select",
         "update_interval": "120h0m0s"
       }
@@ -223,4 +223,3 @@
   }
   
 }
-
