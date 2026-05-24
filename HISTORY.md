@@ -602,7 +602,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update workflow. 
 
-* Merge branch 'new-design-v2' of ssh://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #26 from veto9292/fix/reported-issues. 
   _Fix/reported issues_
@@ -768,16 +768,16 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Better log page, upgrade to flutter 3.32.4. 
 
-* Merge branch 'new-design-v2' of ssh://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #24 from veto9292/fix/reported-issues. 
   _Fix/reported issues_
 
 * Merge. 
 
-* Merge branch 'new-design-v2' of ssh://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
-* Merge branch 'new-design-v2' of ssh://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Update flutter. 
 
@@ -1084,7 +1084,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Change default connection test url to apple. 
 
-* Merge branch 'new-design-v2' of https://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #20 from veto9292/fix/reported-issues. 
   _Fix/reported issues_
@@ -1129,7 +1129,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add profilename in start. 
 
-* Merge branch 'new-design-v2' of https://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #19 from veto9292/fix/reported-issues. 
   _Fix/reported issues_
@@ -1160,7 +1160,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Improve windows luncher. 
 
-* Merge branch 'new-design-v2' of https://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #18 from veto9292/fix/reported-issues. 
   _Fix/reported issues_
@@ -1179,7 +1179,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix macos. 
 
-* Merge branch 'new-design-v2' of https://github.com/hiddify/hiddify-next-ios into new-design-v2. 
+* Merge branch 'new-design-v2' of https://github.com/KUAILESHANGWEI/hiddify-app into new-design-v2.
 
 * Merge pull request #17 from veto9292/fix/reported-issues2. 
   _Fix/reported issues2_
@@ -1472,7 +1472,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 <a href="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history?repo_id=643504282" target="_blank" style="display: block" align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=643504282&image_size=auto&color_scheme=dark" width="721" height="auto">
-    <img alt="Star History of hiddify/hiddify-app" src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=643504282&image_size=auto&color_scheme=light" width="721" height="auto">
+    <img alt="Star History of KUAILESHANGWEI/hiddify-app" src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=643504282&image_size=auto&color_scheme=light" width="721" height="auto">
   </picture>
 </a>
 
@@ -1613,7 +1613,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 #### Other
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Change name to hiddifypackettunnel. 
 
@@ -1933,7 +1933,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Enable resolve-destination and ipv6 by default. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #1108 from SonzaiEkkusu/main. 
   _Update Translations for Region Indonesia (id)_
@@ -1946,7 +1946,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Better xray support. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #1106 from amirsaam/main. 
   _General iOS Maintain_
@@ -1967,7 +1967,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 #### Other
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #1084 from MR-TZ-dev/fix/linuxLaunchFix. 
   _fix: fixed problem not launching on Ubuntu 24.04 LTS._
@@ -2096,7 +2096,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix intro page buug. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #1004 from Kianmehrgit/main. 
   _Update translations_
@@ -2402,7 +2402,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 #### Other
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #696 from HSSkyBoy/main. 
   _Update translations (zh_TW and zh_CN)_
@@ -2520,7 +2520,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix postServiceClose implementation. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fink 🐦: update translations. 
 
@@ -2530,7 +2530,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Resolve qr code permssion issue. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #668 from alikhabazian/newyear. 
   _add image field to ConnectionButton_
@@ -2995,7 +2995,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add indonesian translation. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fix qr code scanner. 
 
@@ -3003,7 +3003,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Change experimental feature notice. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Change sidebar stats. 
 
@@ -3468,7 +3468,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Make makefile cross platform. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Add cloudflare warp options. 
 
@@ -3480,7 +3480,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Disable tunnel service for mac. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Remove unnecessary dependencies. 
 
@@ -3494,7 +3494,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Send panic to sentry. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #371 from eltociear/add_ja-readme. 
   _Add Japanese README_
@@ -3672,7 +3672,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Bumpcore version to v0.11. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #343 from amirsaam/main. 
   _url scheme +  target dependency + general update_
@@ -3828,7 +3828,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Update appcast. 
 
@@ -3840,7 +3840,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix build. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fix qr scanner links. 
 
@@ -3977,7 +3977,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update ios. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Ios update. 
 
@@ -4125,7 +4125,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update ios. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fix build. 
 
@@ -4137,7 +4137,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update platform interface. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Update dev-i.yml. 
 
@@ -4163,7 +4163,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update core (singbox 1.7.0-rc.2) 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Refactor router. 
 
@@ -4443,7 +4443,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update README.md. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #138 from huajizhige/main. 
   _inlang: update translations_
@@ -4602,7 +4602,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Merge branch 'main' into ios. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Merge pull request #95 from solokot/main. 
   _Update Russian_
@@ -4644,7 +4644,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update README_cn.md. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Add inlang translations. 
 
@@ -4993,11 +4993,11 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 #### Other
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Update release_message.md. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Update release_message.md. 
 
@@ -5053,7 +5053,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add release message  and help. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fix bugs. 
 
@@ -5178,7 +5178,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add google play descriptions. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 
 
@@ -5236,7 +5236,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add retry for network ops. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Add local profile. 
 
@@ -5394,7 +5394,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update version of core. 
 
-* Merge branch 'main' of hiddify-github:hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Add firebase. 
 
@@ -5410,7 +5410,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Improve accessability. 
 
@@ -5704,7 +5704,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix linux build. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Fix android builds. 
 
@@ -5875,7 +5875,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update build setup. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Create LICENSE.md. 
 
@@ -5891,7 +5891,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Update make. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Add Persian font. 
 
@@ -5925,7 +5925,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Fix CI. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Update ci.yml. 
 
@@ -5951,7 +5951,7 @@ from version 3.32.5 to 3.35.4 and resolve version solving failures._
 
 * Add Farsi(fa) language. 
 
-* Merge branch 'main' of https://github.com/hiddify/hiddify-next. 
+* Merge branch 'main' of https://github.com/KUAILESHANGWEI/hiddify-app.
 
 * Initial commit. 
 
